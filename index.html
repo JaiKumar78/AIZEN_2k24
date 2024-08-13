@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/sympo_logo.png" type="image/x-icon">
+    <title>AIZEN 2k24</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="./assets/code-green.mp4" type="video/mp4">
+        </video>
+    </div>
+    <div class="sympo">
+        <div class="title">
+            <!-- <img src="./assets/sympo_logo.png" alt="" width="150px" height="150px"> -->
+            <h1 class="glitch">
+                <span aria-hidden="true">AI-ZEN'24</span>
+                AI-ZEN'24
+                <span aria-hidden="true">AI-ZEN'24</span>
+            </h1>
+            <p>A National Level Technical Symposium</p>
+            <button class="register button-style custom-btn"><span>Register</span></button>
+        </div>
+        <div class="sections">
+            <h2 class="sec-title">ABOUT SYMPOSIUM</h2>
+            <p>
+                The department is hosting an expansive technical symposium that spans a wide range of disciplines within the field of technology. This symposium features five distinct events, each designed as a competitive platform where participants can showcase their technical prowess. The competitions will cover diverse areas, including software development, data analytics, cybersecurity, electronics, and innovative engineering solutions.Participants will engage in rigorous challenges that test their skills in coding, data interpretation, system security, circuit design, and creative problem-solving. These events aim to foster a spirit of innovation and collaboration, encouraging competitors to push the boundaries of their knowledge and creativity. The symposium serves as a gathering place for tech enthusiasts, providing an opportunity to learn from peers, gain insights from industry experts, and potentially earn recognition for their technical achievements.
+            </p>
+            <button class="button-style custom-btn" id="event-btn">
+                <span>Explore Events</span>
+            </button>
+        </div>
+
+        <div class="sections">
+            <div class="clg-dept">
+                <img src="/assets/dept logo.png" alt="" width="150px" height="150px">
+                <div>
+                    <h2 class="sec-title">
+                        ST. JOSEPH'S INSTITUTE OF TECHNOLOGY
+                    </h2>
+                    <h2 class="sec-title">DEPARTMENT OF ARTIFICIAL INTELLIGENCE & DATA SCIENCE</h2>
+                </div>
+                <img src="/assets/clg-logo.png" alt="" width="150px" height="150px">
+            </div>
+            <p>
+                The Artificial Intelligence and Data Science department serves as a hub for cutting-edge research and education in these rapidly evolving fields. With a multidisciplinary approach, faculty members and researchers explore innovative algorithms, methodologies, and applications. Students gain hands-on experience through coursework and projects, preparing them for careers at the forefront of technology. The department fosters collaboration with industry partners, driving impactful advancements and addressing real-world challenges in AI and data science.
+            </p>
+        </div>
+
+        <div class="timer sections">
+            <h2 class="sec-title">EVENT STARTS IN...</h2>
+            <div class="countdown">
+                <div id="days" class="countdown-item"><br><span>DAYS</span></div> 
+                <div id="hours" class="countdown-item"><br><span>HOURS</span></div> 
+                <div id="minutes" class="countdown-item"><br/>MINUTES</div> 
+                <div id="seconds" class="countdown-item"><br>SECONDS</div> 
+            </div>
+            <h2 class="sec-title">EVENT DATE: 28 AUGUST 2024</h2>
+            <h2 class="sec-title">"<span id="days-text"></span> days left on the clock!"</h2>
+        </div>
+
+        <div class="sections events" id="events-section">
+            <h2 class="sec-title">EVENTS</h2>
+            <div class="events-flex">
+                <div class="slide" id="slide1">
+                    MYSTERY TWIST
+                </div>
+                <div class="slide" id="slide2">
+                    CODE BOUNTY
+                </div>
+                <div class="slide" id="slide3">
+                    THINK OR SINK
+                </div>
+                <div class="slide" id="slide4">
+                    BRAIN TEASERS
+                </div>
+                <div class="slide" id="slide5">
+                    CAPTURE THE FLAG
+                </div>
+            </div>
+
+            <div class="popup" id="popup1">
+                <div class="popup-content">
+                    <span class="close-btn">&times;</span>
+                    <h2>MYSTERY TWIST</h2>
+                    
+                    <h3>Event Description</h3>
+                    <p>"Mystery Twist" is a thrilling event where each round's challenge is a complete surprise until revealed. As participants face increasingly difficult and unpredictable tasks, only the most adaptable will survive. The last one standing after all the twists and turns emerges as the winner.</p>
+                    
+                    <h3>Rules</h3>
+                    <ol>
+                        <li>Teams of 4</li>
+                        <li>Name and the nature of the round will be revealed before the round starts</li>
+                        <li>No substitutions are allowed once the event begins; the original team members must participate in all rounds</li>
+                        <li>No external devices are allowed</li>
+                        <li>Fair and honest play is expected</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="popup" id="popup2">
+                <div class="popup-content">
+                    <span class="close-btn">&times;</span>
+                    <h2>CODE BOUNTY</h2>
+                    
+                    <h3>Event Description</h3>
+                    <p>"Code Bounty" is an engaging event that challenges participants' coding skills. As the rounds proceed, only the most adept will survive the bounty. The most capable teams will emerge as the winners.</p>
+                    
+                    <h3>Rules</h3>
+                    <ol>
+                        <li>An engaging event consisting of four rounds.</li>
+                        <li>Only 2 persons per team are to participate.</li>
+                        <li>The rounds will be revealed on the spot.</li>
+                        <li>No use of external devices is permitted.</li>
+                        <li>Judges' decisions are final and binding.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="popup" id="popup3">
+                <div class="popup-content">
+                    <span class="close-btn">&times;</span>
+                    <h2>THINK OR SINK</h2>
+                    
+                    <h3>Event Description</h3>
+                    <p>Dive into the "Think or Sink" challenge, a dynamic event featuring three engaging rounds where teamwork, quick thinking, and strategic decisions are key. Compete in a series of creative and analytical tasks to test your problem-solving skills and outwit your opponents. Teams of two will tackle puzzles, interpret image clues, and devise survival strategies to emerge victorious.</p>
+                    
+                    <h3>Rules</h3>
+                    <ol>
+                        <li>Three Rounds: Participate in Mind in Motion, AI Connects, and The Last AI Standing.</li>
+                        <li>Each team consists of 2 members.</li>
+                        <li>Strictly adhere to the time limits for each round.</li>
+                        <li>Judges' decisions are final in all matters.</li>
+                        <li>Any form of cheating will result in immediate disqualification.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="popup" id="popup4">
+                <div class="popup-content">
+                    <span class="close-btn">&times;</span>
+                    <h2>BRAIN TEASERS</h2>
+                    
+                    <h3>Event Description</h3>
+                    <p>"Brain Teasers" is a Q&A-based event filled with knowledge and fun, designed to challenge participants' mental agility. Compete in a race to answer questions, squeezing every bit of brainpower to emerge as the fastest and most accurate team.</p>
+                    
+                    <h3>Rules</h3>
+                    <ol>
+                        <li>2-4 participants per team.</li>
+                        <li>4 rounds, each with different rules.</li>
+                        <li>Elimination will be based on scores at the end of each round.</li>
+                        <li>Teams will be eliminated each round, with the final 3 teams advancing to the end.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="popup" id="popup5">
+                <div class="popup-content">
+                    <span class="close-btn">&times;</span>
+                    <h2>CAPTURE THE FLAG</h2>
+                    
+                    <h3>Event Description</h3>
+                    <p>"Capture the Flag" is an insightful event featuring a two-round challenge. Teams of two will participate in AI Bingo to identify AI terms and engage in Data Hunt to analyze datasets. Earn flags by completing tasks, with the first team to collect 5 flags being declared the winner.</p>
+                    
+                    <h3>Rules</h3>
+                    <ol>
+                        <li>Two challenges: AI Bingo and Data Hunt.</li>
+                        <li>Teams of two; one laptop with Jupyter Notebook required.</li>
+                        <li>Fair and honest play is expected.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="sections guidelines">
+            <h2 class="sec-title">GUIDELINES TO KNOW</h2>
+            <ol>
+                <li>All participants should bring their registration slip along with their college ID card.</li>
+                <li>Participants will be permitted to enter the campus only in formal dress code.</li>
+                <li>The offline registration process will end by 9:30 AM on the day of the event.</li>
+                <li>College buses will be available from all parts of the city.</li>
+                <li>All the events will commence at the scheduled time. Participants are requested to be punctual.</li>
+                <li>Breakfast and lunch will be provided by our college.</li>
+                <li>Proper decorum must be maintained in accordance with the college rules while inside the college campus.</li>
+            </ol>
+        </div>
+
+        <div class="contact">
+            <h2 class="sec-title">CONTACT US</h2>
+            <div class="members">
+                <div>
+                    <h3>STAFF CO-ORDINATORS</h3>
+                    <div>
+                        <div>
+                            <p></p>
+                            <p></p>
+                        </div>
+                        <div>
+                            <p></p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3>CONVENOR</h3>
+                    <p>DR. R. PRISCILLA</p>
+                    <p>HEAD OF THE DEPARTMENT</p>
+                </div>
+                
+                <div>
+                    <h3>STUDENT CO-ORDINATORS</h3>
+                    <div>
+                        <div>
+                            <p></p>
+                            <p></p>
+                        </div>
+                        <div>
+                            <p></p>
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

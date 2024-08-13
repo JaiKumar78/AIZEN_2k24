@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Gemunu+Libre:wght@200..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Recharge";
+    src: url('./assets/recharge\ bd.otf');
+}
+
+@font-face {
+    font-family: "Resfire";
+    src: url('./assets/Resfire-GOgom.otf');
+}
+
+/* .body {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgba(0, 0, 255, 0.1);
+} */
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Ensures video stays behind content */
+}
+
+#bg-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+}
+
+
+.title{
+    height: 100vh;
+    width: 100%;
+    font-family: "Recharge", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+}
+
+/* .button-style{
+    margin-top: 20px;
+    font-family: "Inter", sans-serif;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 15px 20px;
+    background-color: #80ed99;
+    border-radius: 28px;
+    border: none;
+    cursor: pointer;
+} */
+
+/* .button-style:hover{
+    color: white;
+} */
+
+.custom-btn {
+    color: #fff;
+    width: max-content;
+    height: 40px;
+    margin-top: 20px;
+    padding: 10px 25px;
+    font-family: "Recharge", sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+  }
+
+.button-style {
+    color: #14EB14;
+    border: 1px solid#14EB14;
+    box-shadow: 0 0 5px #14EB14, 0 0 5px #14EB14 inset;
+    z-index: 1;
+  }
+.button-style:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background: #14EB14;
+    box-shadow:
+     0 0 20px  #14EB14;
+    transition: all 0.3s ease;
+  }
+.button-style:hover {
+    color: #fff;
+  }
+.button-style:hover:after {
+    left: 0;
+    width: 100%;
+  }
+.button-style:active {
+    top: 2px;
+  }
+
+
+
+.glitch {
+  font-size: 8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+
+  text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+    -0.025em -0.05em 0 rgba(0, 255, 0, 0.75),
+    0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+
+  animation: glitch 500ms infinite;
+}
+
+.glitch span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.glitch span:first-child {
+  animation: glitch 650ms infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+  transform: translate(-0.025em, -0.0125em);
+  /* color: green; */
+  opacity: 0.8;
+}
+
+.glitch span:last-child {
+  animation: glitch 375ms infinite;
+  clip-path: polygon(0 80%, 100% 20%, 100% 100%, 0 100%);
+  transform: translate(0.0125em, 0.025em);
+  /* color: red; */
+  opacity: 0.8;
+}
+
+/* https://web.dev/prefers-reduced-motion/#(bonus)-forcing-reduced-motion-on-all-websites */
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  14% {
+    text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+      -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  15% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+      0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  50% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+      0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  99% {
+    text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+      0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+  100% {
+    text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
+      -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+      -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}
+
+.sections{
+    margin: 20px auto;
+    width: 80%;
+    height: 50vh;
+    color: white;
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: "Inter", sans-serif;
+    text-align: justify;
+    line-height: 30px;
+    /* animation: revealup linear forwards;
+    animation-timeline: view-timeline(5% 85%);
+    animation-range: entry 50% cover 50%; */
+}
+
+/* @keyframes revealup {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+} */
+
+/* @view-timeline {
+    name: view-timeline;
+    inset: 0; Use the entire viewport
+} */
+
+.sec-title{
+    margin: 15px 0;
+    font-family: "Recharge", sans-serif;
+    background: linear-gradient(to bottom, #55EFC4, #000); /* Adjust the gradient colors and angle as needed */
+    -webkit-background-clip: text; /* Ensures the background is clipped to the text */
+    -webkit-text-fill-color: transparent; /* Makes the text transparent to reveal the background */
+    background-clip: text; /* Standard property for non-WebKit browsers */
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.sec-title:hover{
+    transform: scale(1.1);
+}
+
+.clg-dept{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 45px;
+}
+
+.countdown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.countdown-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(0, 105, 62, 0.3);
+    border-radius: 20px;
+    font-family: "Orbitron", sans-serif;
+    font-size: 25px;
+    color: #14EB14;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+}
+
+.events-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    font-size: 20px;
+    font-family: "Recharge", sans-serif;
+}
+
+.slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 20px;
+    width: 350px;
+    height: 400px;
+    border-radius: 20px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+
+.slide:hover {
+    transform: scale(1.1);
+}
+
+#slide1{
+    background: linear-gradient(114.3deg, 
+    rgba(19, 126, 57, 0.5) 0.2%,  
+    rgba(8, 65, 91, 0.5) 68.5%), url('./assets/mystery_twist.jpg'); /* Replace with the actual image path */
+    background-size: cover;       /* Ensures the image fits within the slide */
+    background-repeat: no-repeat;   /* Prevents the image from repeating */
+    background-position: center;  
+}
+
+#slide2{
+    background: linear-gradient(114.3deg, 
+    rgba(19, 126, 57, 0.5) 0.2%,  
+    rgba(8, 65, 91, 0.5) 68.5%), url('./assets/code_bounty.jpg'); /* Replace with the actual image path */
+    background-size: cover;       /* Ensures the image fits within the slide */
+    background-repeat: no-repeat;   /* Prevents the image from repeating */
+    background-position: center;  
+}
+#slide3{
+    background: linear-gradient(114.3deg, 
+    rgba(19, 126, 57, 0.5) 0.2%,  
+    rgba(8, 65, 91, 0.5) 68.5%), url('./assets/tos.jpg'); /* Replace with the actual image path */
+    background-size: cover;       /* Ensures the image fits within the slide */
+    background-repeat: no-repeat;   /* Prevents the image from repeating */
+    background-position: center;  
+}
+
+#slide4{
+    background: linear-gradient(114.3deg, 
+    rgba(19, 126, 57, 0.5) 0.2%,  
+    rgba(8, 65, 91, 0.5) 68.5%), url('./assets/brain_teasers.jpg'); /* Replace with the actual image path */
+    background-size: cover;       /* Ensures the image fits within the slide */
+    background-repeat: no-repeat;   /* Prevents the image from repeating */
+    background-position: center;  
+}
+
+#slide5{
+    background: linear-gradient(114.3deg, 
+    rgba(19, 126, 57, 0.5) 0.2%,  
+    rgba(8, 65, 91, 0.5) 68.5%), url('./assets/ctf.jpg'); /* Replace with the actual image path */
+    background-size: cover;       /* Ensures the image fits within the slide */
+    background-repeat: no-repeat;   /* Prevents the image from repeating */
+    background-position: center;  
+}
+
+.popup {
+    display: none; /* Hide the popup by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure the popup is on top */
+}
+
+.popup-content {
+    background: linear-gradient(114.3deg, 
+    rgba(19, 126, 57, 1) 0.2%,  
+    rgba(8, 65, 91, 1) 68.5%);
+    padding: 20px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 600px;
+    position: relative; /* Ensure the positioning context for the ::after element */
+    text-align: center;
+}
+
+.popup-content h2 {
+    position: relative; /* Position relative to apply ::after pseudo-element */
+    display: inline-block; /* Adjust width based on content */
+    font-size: 1.5rem;
+    margin-bottom: 1rem; /* Space below the heading */
+    color: white;
+    font-family: "Recharge", sans-serif;
+}
+
+.popup-content h2::after {
+    content: ''; /* Empty content for the pseudo-element */
+    position: absolute; /* Position relative to the h2 element */
+    left: 0;
+    bottom: -5px; /* Position the underline below the h2 */
+    width: 100%;
+    height: 2px; /* Thickness of the underline */
+    background: white; /* Color of the underline */
+}
+
+.popup-content ol {
+    text-align: left; /* Align list items to the left */
+    margin: 0 auto; /* Center the list within the content */
+    padding: 0; /* Remove default padding */
+    list-style-position: inside; /* Ensure the list items are inside the content area */
+    max-width: 90%; /* Adjust max-width as needed */
+}
+
+.popup-content ol li {
+    margin-bottom: 8px; /* Space between list items */
+}
+
+.popup-content p{
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+    transition: transform 0.3s ease; 
+}
+
+.close-btn:hover {
+    transform: scale(1.3); /* Scale the button to 120% of its size on hover */
+    color: red;
+}
+
+.guidelines li{
+    margin-bottom: 10px;
+    font-family: "Inter", sans-serif;
+}
+
+.members{
+    display: flex;
+    justify-content: space-evenly;
+}
+.contact h3{
+    margin-bottom: 10px;
+    font-family: "Recharge", sans-serif;
+    background: linear-gradient(to bottom, #55EFC4, #000); /* Adjust the gradient colors and angle as needed */
+    -webkit-background-clip: text; /* Ensures the background is clipped to the text */
+    -webkit-text-fill-color: transparent; /* Makes the text transparent to reveal the background */
+    background-clip: text; /* Standard property for non-WebKit browsers */
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.members p{
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    font-family: "Inter", sans-serif;
+}
+
+.members p:first-child{
+    font-size: 20px;
+    font-weight: 800;
+}
